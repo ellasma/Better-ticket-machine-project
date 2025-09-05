@@ -95,7 +95,7 @@ public class TicketMachine
             
         }
         else {
-            
+           System.out.printf("Ticket is affordable"); 
         }
     }
 }
