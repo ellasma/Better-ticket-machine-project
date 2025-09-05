@@ -1,21 +1,15 @@
+import lang.stride.*;
+
 /**
- * TicketMachine models a ticket machine that issues
- * flat-fare tickets.
- * The price of a ticket is specified via the constructor.
- * Instances will check to ensure that a user only enters
- * sensible amounts of money, and will only print a ticket
- * if enough money has been input.
- * 
- * @author David J. Barnes and Michael Kölling
- * @version 7.1
+ * TicketMachine models a ticket machine that issues flat-fare tickets. The price of a ticket is specified via the constructor. Instances will check to ensure that a user only enters sensible amounts of money, and will only print a ticket if enough money has been input. @author David J. Barnes and Michael Kölling @version 7.1
  */
 public class TicketMachine
 {
-    // The price of a ticket from this machine.
+    /* The price of a ticket from this machine.*/
     private int price;
-    // The amount of money entered by a customer so far.
+    /* The amount of money entered by a customer so far.*/
     private int balance;
-    // The total amount of money collected by this machine.
+    /* The total amount of money collected by this machine.*/
     private int total;
 
     /**
@@ -23,7 +17,7 @@ public class TicketMachine
      */
     public TicketMachine(int cost)
     {
-        price = cost;
+        int price = cost;
         balance = 0;
         total = 0;
     }
@@ -45,12 +39,11 @@ public class TicketMachine
     }
 
     /**
-     * Receive an amount of money from a customer.
-     * Check that the amount is sensible.
+     * Receive an amount of money from a customer. Check that the amount is sensible.
      */
     public void insertMoney(int amount)
     {
-        if(amount < 0) {
+        if (amount < 0) {
             System.out.println("Use a positive amount rather than: " + amount);
         }
         else {
@@ -59,35 +52,30 @@ public class TicketMachine
     }
 
     /**
-     * Print a ticket if enough money has been inserted, and
-     * reduce the current balance by the ticket price. Print
-     * an error message if more money is required.
+     * Print a ticket if enough money has been inserted, and reduce the current balance by the ticket price. Print an error message if more money is required.
      */
     public void printTicket()
     {
-        if(balance >= price) {
-            // Simulate the printing of a ticket.
+        if (balance >= price) {
+            /* Simulate the printing of a ticket.*/
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();
-
-            // Update the total collected with the price.
+            /* Update the total collected with the price.*/
             total = total + price;
-            // Reduce the balance by the price.
+            /* Reduce the balance by the price.*/
             balance = balance - price;
         }
         else {
-            System.out.printf("You must insert at least %d more cents.%n",
-                              price - balance);
+            System.out.printf("You must insert at least %d more cents.%n", price - balance);
         }
     }
 
     /**
-     * Return the money in the balance.
-     * The balance is cleared.
+     * Return the money in the balance. The balance is cleared.
      */
     public int refundBalance()
     {
@@ -96,9 +84,19 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
-    
-    public void affordable(int budget){
-        //TODO:Write an if-statement that checks budget against price and prints
-        //a message saying weather a ticket is affordable
+
+    /**
+     * 
+     */
+    public void affordable(int budget)
+    {
+        /* TODO:Write an if-statement that checks budget against price and prints a message saying weather a ticket is affordable*/
+        if (price > budget) {
+            
+        }
+        else {
+            
+        }
     }
 }
+
