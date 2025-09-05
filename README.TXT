@@ -1,15 +1,11 @@
 Project: better-ticket-machine
-Authors: David Barnes and Michael Kölling
+Authors:
 
-This project is part of the material for the book
+52.
+The code still compiles and the ticket still prints without inserting any money.
+55.
+saving=price*discount;
+56.
+mean=total/count;
 
-   Objects First with Java - A Practical Introduction using BlueJ
-   Seventh edition
-   David J. Barnes and Michael Kölling
-   Pearson Education
-
-It is discussed in chapter 2.
-
-Purpose of project: To illustrate conditional statements.
-How to start this project: Create one or more TicketMachine objects.
 
